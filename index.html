@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>JS Challenge The Last Mission</title>
+
+    <meta
+      name="description"
+      content="The last assignment of Nomad Coder JS Challenge"
+    />
+    <meta name="keyword" content="js, nomad coder, assignment" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- <div id="login-area" align="center"> -->
+    <form id="login-form" class="hidden">
+      <input
+        required
+        maxlength="15"
+        type="text"
+        placeholder="What is your name?"
+      />
+      <input type="sunmit" value="Log in" />
+      <!-- <button type="sunmit">Log In</button> -->
+    </form>
+    <!-- </div> -->
+
+    <div id="quote-area" align="center">
+      <span id="quote"></span>
+      <span id="author"></span>
+    </div>
+
+    <div id="todo-area"></div>
+
+    <div id="clock-area" align="center">
+      <h2 id="clock"></h2>
+    </div>
+
+    <table id="weather-area" align="center" border="0">
+      <thead>
+        <tr>
+          <th colspan="2">Today's Weather</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="2">
+            <span id="weather-icon"><img id="icon" src="" /></span>
+          </td>
+          <td><span id="city"></span></td>
+        </tr>
+        <tr>
+          <td><div id="today-weather"></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="js/bgimg.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/quotos.js"></script>
+    <!-- <script src="js/weather.js"></script> -->
+  </body>
+</html>
