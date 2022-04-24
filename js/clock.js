@@ -1,4 +1,5 @@
 const clock = document.querySelector("#clock");
+const date = document.querySelector("#date");
 const week = ["SUN", "MON", "TUE", "WED", "THR", "FRI", "SAT"];
 let ampm = "";
 
@@ -18,21 +19,22 @@ function changeAMPM(hours) {
 }
 
 function displayClock() {
-  const date = new Date();
-  const fullYear = date.getFullYear();
-  const month = String(date.getMonth()).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  const dday = week[date.getDay()];
-  const minutes = String(date.getMinutes()).padStart(2, "0");
-  const seconds = String(date.getSeconds()).padStart(2, "0");
+  const today = new Date();
+  const fullYear = today.getFullYear();
+  const month = String(today.getMonth()).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+  const dday = week[today.getDay()];
+  const minutes = String(today.getMinutes()).padStart(2, "0");
+  const seconds = String(today.getSeconds()).padStart(2, "0");
 
-  let hours = date.getHours();
+  let hours = today.getHours();
 
   hours = changeAMPM(hours);
 
   hours = String(hours).padStart(2, "0");
 
-  clock.innerText = `${fullYear}/${month}/${day} ${dday}\n${ampm} ${hours}:${minutes}:${seconds}`;
+  date.innerText = `${fullYear}/${month}/${day} ${dday}`;
+  clock.innerText = `${ampm} ${hours}:${minutes}:${seconds}`;
 }
 
 displayClock();

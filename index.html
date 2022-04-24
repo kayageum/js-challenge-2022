@@ -17,34 +17,35 @@
   </head>
 
   <body>
-    <div id="login-area" align="center">
+    <div></div>
+    <div id="login-area">
       <form id="login-form" class="hidden">
         <input
           required
           maxlength="15"
           type="text"
           placeholder="What is your name?"
+          class="input-underline"
         />
         <input type="submit" value="Log in" />
       </form>
     </div>
 
-    <div id="greeting-area" align="center">
+    <div id="greeting-area">
       <h1 id="greeting" class="hidden"></h1>
     </div>
 
-    <div id="quote-area" align="center">
+    <div id="quote-area">
       <span id="quote"></span>
       <span id="author"></span>
     </div>
 
-    <div id="todo-area"></div>
+    <div id="clock-area">
+      <span id="clock"></span></br>
+      <span id="date"></span>
+    </div></br>
 
-    <div id="clock-area" align="center">
-      <h2 id="clock"></h2>
-    </div>
-
-    <table id="weather-area" align="center" border="0">
+    <table id="weather-area" border="0">
       <thead>
         <tr>
           <th colspan="2">Today's Weather</th>
@@ -62,11 +63,25 @@
         </tr>
       </tbody>
     </table>
-    <script src="js/bgimg.js"></script>
+
+    <div id="todo-area">
+      <form id="todo-form">
+        <input
+          required
+          type="text"
+          id="todo-input"
+          placeholder="Write todo here and press enter"
+          class="input-underline"
+        />
+      </form>
+      <ul id="todo-list" align="left"></ul>
+    </div>
+
+    <script src="js/bgimg.js"></script> -->
     <script src="js/clock.js"></script>
     <script src="js/login.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/quotos.js"></script>
-    <!-- <script src="js/weather.js"></script> -->
+    <script src="js/weather.js"></script>
   </body>
 </html>

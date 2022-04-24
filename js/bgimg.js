@@ -10,9 +10,8 @@ const imgs = [
   "09.jpg",
   "10.jpg",
   "11.jpg",
-  "12.jpg",
 ];
 
 const selectedImg = imgs[Math.floor(Math.random() * imgs.length)];
 
-document.body.style.backgroundImage = `url(bgimg/${selectedImg})`;
+document.body.style.backgroundImage = `url(img/${selectedImg})`;
