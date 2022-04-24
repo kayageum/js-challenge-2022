@@ -6,12 +6,13 @@ body {
   color: white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
 }
 
 body::before {
   content: "";
+  height: 100vh;
   position: absolute;
   top: 0px;
   left: 0px;
