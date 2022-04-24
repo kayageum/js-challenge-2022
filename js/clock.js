@@ -20,21 +20,20 @@ function changeAMPM(hours) {
 
 function displayClock() {
   const today = new Date();
+
   const fullYear = today.getFullYear();
   const month = String(today.getMonth()).padStart(2, "0");
   const day = String(today.getDate()).padStart(2, "0");
   const dday = week[today.getDay()];
+
+  let hours = today.getHours();
+  hours = changeAMPM(hours);
+  hours = String(hours).padStart(2, "0");
   const minutes = String(today.getMinutes()).padStart(2, "0");
   const seconds = String(today.getSeconds()).padStart(2, "0");
 
-  let hours = today.getHours();
-
-  hours = changeAMPM(hours);
-
-  hours = String(hours).padStart(2, "0");
-
-  date.innerText = `${fullYear}/${month}/${day} ${dday}`;
   clock.innerText = `${ampm} ${hours}:${minutes}:${seconds}`;
+  date.innerText = `${fullYear}/${month}/${day} ${dday}`;
 }
 
 displayClock();
